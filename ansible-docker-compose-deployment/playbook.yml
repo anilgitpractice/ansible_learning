@@ -1,0 +1,11 @@
+---
+- name: create nginx continer using docker compose
+  become: yes
+  hosts: localhost
+  tasks:
+    - name: docker-compose nginx deployment
+      community.docker.docker_compose:
+        project_src: /home/anil/anilpractce_git/ansible_learning/ansible-docker-compose-deployment/
+        files:
+          - docker-compose.yml
+        state: present

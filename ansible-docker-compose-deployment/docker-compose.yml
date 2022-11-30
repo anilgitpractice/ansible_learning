@@ -1,0 +1,6 @@
+version: "3.3"
+services:
+  nginx_container:
+    image: nginx:latest
+    ports:
+      - 80:80
